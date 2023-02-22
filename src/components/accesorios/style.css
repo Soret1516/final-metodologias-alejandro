@@ -1,23 +1,19 @@
-/* Section de fondo degradado cortado */
-
 /* Parametro cards */
 
-.celulares-container {
+.accesorios-container {
   width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 40px 10px;
+  padding: 100px 100px;
 }
 
-.listado-celulares {
-  margin: 0 auto;
+.listado-accesorios {
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  width: 100%;
 }
 
-.cel-card {
+.card-img {
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -42,7 +38,7 @@
 }
 
 .wrapper:hover {
-  box-shadow: -12px -5px 2px -1px rgba(0, 170, 255, 0.387);
+  box-shadow: -1px -5px 5px -1px rgba(0, 170, 255, 0.387);
   transform: scale(1.03);
 }
 
@@ -105,14 +101,37 @@ Degradado de la parte donde esta Marca... Etc */
   color: rgb(217, 217, 217);
 }
 
+.scroll-caracteristicas{
+  overflow-y: scroll;
+  height: 80px;
+}
+
+.scroll-caracteristicas::-webkit-scrollbar{
+  background: none;
+  width: 10px;
+}
+
+.scroll-caracteristicas::-webkit-scrollbar-button{
+  display: none;
+}
+
+.scroll-caracteristicas::-webkit-scrollbar-thumb{
+  background: white;
+  border-radius: 20px;
+}
+
+.scroll-caracteristicas::-webkit-scrollbar-thumb:hover{
+  background: rgb(170, 170, 170);
+}
+
 /* Caracteristicas de la imagen con movimiento */
 
 .productImage {
   position: absolute;
-  width: 321px;
-  height: auto;
+  width: 210px;
+  height: 180px;
   margin-top: -258px;
-  margin-left: 20px;
+  margin-left: 100px;
   animation: updowncontroller infinite 7s alternate;
   -webkit-animation: updowncontroller infinite 7s alternate;
 }
@@ -120,7 +139,7 @@ Degradado de la parte donde esta Marca... Etc */
 .productImage img {
   margin-left: 30px;
   width: 100%;
-  height: auto;
+  height: 100%;
   transition: ease 5s all;
   -webkit-transition: ease 5s all;
   -moz-transition: ease 5s all;
@@ -256,9 +275,116 @@ Degradado de la parte donde esta Marca... Etc */
 
 /* -----------------------ZONA FORMULARIO AGREGAR----------------- */
 
-.formCell {
+.form {
   border-radius: 30px;
   background: #212121;
   box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
   margin: 0 auto;
+  z-index: 1;
+}
+
+.contenedorForm {
+  width: 100%;
+}
+
+.contenedorForm input,
+.contenedorForm textarea {
+  width: 80%;
+  outline: none;
+}
+
+
+
+.btnAgregar {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  border-radius: 20px;
+  border: 2px solid rgb(62, 62, 255);
+}
+
+.btnAgregar:hover {
+  box-shadow: 0px 0px 10px rgb(83, 83, 255);
+}
+
+
+
+/* Validacion formulario */
+
+.contenedorForm {
+  position: relative;
+}
+
+.fa-check,
+.fa-circle-exclamation {
+  opacity: 0;
+  transition: 0.5s all;
+  position: absolute;
+  margin: 7px 5px;
+  font-size: 1.3rem;
+}
+
+.fa-check {
+  color: rgb(54, 110, 54);
+  text-shadow: 0px 0px 3px white;
+}
+
+.fa-circle-exclamation {
+  color: rgb(94, 15, 15);
+  text-shadow: 0px 0px 3px white;
+}
+
+.exclamation-alert {
+  position: absolute;
+  left: 300px;
+  bottom: 10px;
+  background: rgb(124, 35, 35);
+  width: auto;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 0.6rem;
+  color: white;
+  box-shadow: 3px 3px 10px black;
+  opacity: 0;
+  transition: 0.5s all;
+}
+
+.exclamation-alert p {
+  width: 100px;
+}
+
+#exclamationC {
+  bottom: 30px;
+}
+
+#carac-alert {
+  bottom: 30px;
+}
+
+#submit-alert {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.add-cel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: fixed;
+  right: 0;
+  top: 200px;
+  padding: 10px;
+  padding-right: 25px;
+  border-radius: 20px;
+  transform: translateX(226px);
+  transition: 0.7s;
+  color: white;
+}
+
+.add-cel:hover {
+  transform: translateX(20px);
+  transition: 0.7s;
 }
